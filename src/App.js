@@ -3,14 +3,13 @@ import './App.css';
 // import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForms from './components/TextForms';
-import About from './components/About';
+// import About from './components/About';
 import React, { useState } from 'react';
-import{
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-}from "react-router-dom";
+// import{
+//   BrowserRouter as Router,
+//   Routes,
+//   Route
+// }from "react-router-dom";
 
 
 
@@ -40,20 +39,11 @@ function App() {
 }
   return (
   <> 
-<Router>
   <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
-
   <div className="container my-3">
-    <Routes>
-      <Route path="/about" element={<About />} />
-      <Route
-        path="/"
-        element={<TextForms heading="Enter The text to analyze below" mode={mode} />}
-      />
-    </Routes>
+  <TextForms heading="Enter The text to analyze below" mode={mode} />   
   </div>
-</Router>  </>
+</> 
   );
 }
-
 export default App;
